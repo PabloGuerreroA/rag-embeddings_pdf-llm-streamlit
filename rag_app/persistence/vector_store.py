@@ -39,8 +39,10 @@ class VectorStore:
         self._dim = embedding_dim
 
         if config.use_in_memory:
+            print("✅ Qdrant: modo en memoria")
             self._client = QdrantClient(":memory:")
         else:
+            print(f"🔗 Qdrant: conectando a {config.url}")
             self._client = QdrantClient(
                 url=config.url,
                 api_key=config.api_key or None,

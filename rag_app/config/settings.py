@@ -26,7 +26,7 @@ class QdrantConfig:
     collection_name: str = "rag_documents"
     # If no URL is provided, use in-memory Qdrant (great for demos)
     use_in_memory: bool = field(
-        default_factory=lambda: not bool(os.getenv("QDRANT_URL", ""))
+        default_factory=lambda: not bool(os.getenv("QDRANT_URL", "").strip())
     )
 
 
