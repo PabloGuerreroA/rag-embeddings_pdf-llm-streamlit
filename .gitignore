@@ -1,0 +1,9 @@
+*.env
+.vscode
+.git
+
+#Ficheros
+condicionado-hogar-mapfre.pdf
+rag.pdf
+rag_pipeline.ipynb
+semantic_search.ypynb
